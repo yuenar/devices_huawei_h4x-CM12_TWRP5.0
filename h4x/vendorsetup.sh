@@ -1,0 +1,3 @@
+add_lunch_combo cm_h4x-userdebug
+
+add_lunch_combo full_h4x-userdebug

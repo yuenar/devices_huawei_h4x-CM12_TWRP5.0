@@ -1,0 +1,168 @@
+#
+# from device/hisi/hi6210sft/system.prop
+#
+#
+# system.prop for generic sdk
+#
+
+#add by z00220246 for DSDA III begin
+rild.libpath=/system/lib/libbalong-ril.so
+rild.libargs=-m modem0
+
+rild.libpath1=/system/lib/libbalong-ril.so
+rild.libargs1=-m modem1
+
+ro.config.hisi_soc_type=true
+ro.config.hisi_rpt_mode=0
+
+balong.debug.on=true
+#add by z00220246 for DSDA III End
+
+#ro.showNavigationBar.bSupport=true
+
+#g00124340 2011/08/25 add bcm4330 FM module
+ro.config.fm_type=libbcmfm_if
+#g00124340 2011/08/25 add bcm4330 FM module
+
+#DTS2014062703889 add by z00278222for Bluedroid begin
+ro.bt.bdaddr_path=/data/misc/bluedroid/macbt
+#DTS2014062703889 add by z00278222for Bluedroid end
+
+# c58721
+dalvik.vm.heapsize=256m
+#DTS2011102003963 l00186420 20111020 begin
+ro.config.KeyPassToUser=true
+#DTS2011102003963 l00186420 20111020 end
+
+# DTS2012012902415 ykf13248 20120129 begin
+persist.sys.strictmode.visual=false
+# DTS2012012902415 ykf13248 20120129 end
+
+# DTS2012021706052 add by y00185129 20120217 begin
+ro.config.notification_sound=Glory.ogg
+ro.config.alarm_alert=Pmukkale.ogg
+ro.config.ringtone=Huawei_Tune.ogg
+# DTS2012021706052 add by y00185129 20120217 end
+
+#DTS2012012901475 ykf13248 20120210 begin
+install.frobidden=false
+#DTS2012012901475 ykf13248 20120210 end
+
+#DTS2012020601769 c00166660 20120222 begin
+ro.camera.sound.forced=1
+#DTS2012020601769 c00166660 20120222 end
+
+#DTS2012031304780 w00187765 20120313 begin
+keyguard.no_require_sim=true
+#DTS2012031304780 w00187765 20120313 end
+
+#DTS2012032302627 y44207  20120322 begin
+ro.config.hw_dolby=true
+#DTS2012032302627 y44207  20120322 end
+
+ro.config.hw_voicerecord=true
+
+#begin£ºz00212134 add for widevine level3
+ro.config.widevine_level3=true
+#ro.product.manufacturer=HUAWEI
+#ro.product.model=Huawei Ascend
+
+ro.sf.lcd_density=160
+
+drm.service.enabled=true
+#end£ºz00212134 add for widevine level3
+
+#DTS2012091705186  yuhuijuan 00204161 2012/09/17  Default ecclist begin
+ro.ril.ecclist=112,911,#911,*911
+#DTS2012091705186  yuhuijuan 00204161 2012/09/17  Default ecclist end
+
+#begin c00166660 add for HIGH QUALITY RESAMPLER
+af.resampler.quality=3
+#end c00166660 add for HIGH QUALITY RESAMPLER
+
+#DTS2014041403053 add for settings apk that can enable multi sim  active 2014/05/22 begin
+persist.radio.apm_sim_not_pwdn = 1 
+#DTS2014041403053 2014/05/22 end
+
+#persist.demo.hdmirotation=portrait
+#persist.demo.hdmirotationlock=false
+#  ICOS1.1-001-005, 'GPU force 2D draw' optimization,
+#  DTS number: NULL,
+#  xionghu 00178268, begin
+
+ro.config.hw_GPU2DWhiteList=true
+
+ro.config.hw_dts=true
+ro.config.hw_dolby=false
+#  ICOS1.1-001-005, 'GPU force 2D draw' optimization,
+#  DTS number: NULL,
+#  xionghu 00178268, end
+
+# ICOS1.1-001-007, 'Compatibility' optimization, 
+# DTS number: NULL,
+# huangzhouxiang 00223277, begin
+
+ ro.config.compatibility_enable=1
+ #  ICOS1.1-001-007, 'Compatibility' optimization, 
+ #  DTS number: NULL,
+ #  huangzhouxiang 00223277, end
+ 
+
+#begin:s00190137 add for balong test, must be false for product line
+ro.config.balong_test=false
+#end:s00190137 add for balong test, must be false for product line
+
+#DTS2014062702084 add for FHD performance enhancement 2014/06/28 begin
+debug.hwui.render_dirty_regions=false
+#DTS2014062702084 2014/06/28 end
+
+ro.config.hw_sglte.mcc=460
+ro.config.hw_sglte_simblist=46001
+ro.config.keypasstouser=true
+
+#ro.build.hide=true
+#ro.build.hide.matchers=Mali-400 MP;ARM;
+#ro.build.hide.replacements=unknown;unknown;
+
+#DTS2014072202099 add for camera hal superzoom and video stabilization
+ro.config.hw.VIS=true
+ro.config.hwscope=true
+#DTS2014072202099 2014/07/22 end
+
+#DTS2014060605634 add for pop delay time begin
+ro.audio.lpp_timeout_ms=0
+#DTS2014060605634 2014/07/01 end
+
+#DTS2014072405756 add for music+ lpp support
+ro.config.hw_music_lp=true
+#DTS2014072405756 2014/07/25 end
+
+#begin pn:DTS2014071701904,addd by w81003630,2014/07/17
+ro.config.hw_testingsettings=true
+#end pn:DTS2014071701904,addd by w81003630,2014/07/17
+
+ro.config.hw_sensorhub=false
+#DTS2014081808274 chenqihang 00177591 20140818 begin
+ro.product.platform.pseudonym=1ARB9CV
+#DTS2014081808274 chenqihang 00177591 20140818 end
+
+#/* BEGIN PN:DTS2014081505452,Added by chenyu, 2014-08-14*/
+ro.config.hw_emerg=on
+#/* END PN:DTS2014081505452,Added by chenyu, 2014-08-14*/
+
+
+#
+# ADDITIONAL_BUILD_PROPERTIES
+#
+ro.com.android.dateformat=MM-dd-yyyy
+ro.config.ringtone=Ring_Synth_04.ogg
+ro.config.notification_sound=pixiedust.ogg
+ro.carrier=unknown
+ro.config.alarm_alert=Alarm_Classic.ogg
+ro.setupwizard.mode=OPTIONAL
+ro.com.google.gmsversion=4.4.2_r5
+drm.service.enabled=true
+persist.sys.dalvik.vm.lib=libdvm.so
+dalvik.vm.dexopt-flags=m=y
+net.bt.name=Android
+dalvik.vm.stack-trace-file=/data/anr/traces.txt
